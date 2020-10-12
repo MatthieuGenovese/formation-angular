@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-icon-edition',
@@ -8,7 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class IconEditionComponent implements OnInit {
 
-  public myIcon = faBars;
+  public myIcon = faEdit;
   constructor() { }
 
   ngOnInit(): void {
