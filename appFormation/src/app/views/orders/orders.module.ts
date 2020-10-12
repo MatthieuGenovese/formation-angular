@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PageListOrdersComponent } from './pages/page-list-orders/page-list-orders.component';
-import { PageHomeComponent } from './pages/page-home/page-home.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
+import { OrdersRoutingModule } from './orders-routing.module';
+import { PageListOrdersComponent } from './pages/page-list-orders/page-list-orders.component';
 
 
 @NgModule({
-  declarations: [PageListOrdersComponent, PageHomeComponent, PageNotFoundComponent],
+  declarations: [PageListOrdersComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    OrdersRoutingModule
   ]
 })
 export class OrdersModule { }

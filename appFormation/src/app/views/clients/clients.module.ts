@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PageListClientsComponent } from './pages/page-list-clients/page-list-clients.component';
 
+import { ClientsRoutingModule } from './clients-routing.module';
+import { PageListClientComponent } from './pages/page-list-client/page-list-client.component';
 
 
 @NgModule({
-  declarations: [PageListClientsComponent],
+  declarations: [PageListClientComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    ClientsRoutingModule
   ]
 })
 export class ClientsModule { }
