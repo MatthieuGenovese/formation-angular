@@ -8,6 +8,7 @@ import { UiModule } from './ui/ui.module';
 import { TextsModule } from './texts/texts.module';
 import { IconsModule } from './icons/icons.module';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
     UiModule,
     TextsModule,
