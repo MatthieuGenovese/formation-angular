@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,10 @@ import { TextsModule } from './texts/texts.module';
 import { IconsModule } from './icons/icons.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import  localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr, 'fr-FR');
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { HttpClientModule } from '@angular/common/http';
     IconsModule,
     CoreModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID, useValue:'fr-FR'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
