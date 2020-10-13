@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Client } from 'src/app/shared/models/client.model';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
+import { StateClient } from 'src/app/shared/enums/state-client.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +32,15 @@ export class ClientsService {
 
   public set collection(col: Observable<Client[]>){
     this.pCollection = col;
+  }
+
+  public getByState(state : StateClient): Observable<Client[]> {
+    return this.http.get<Client[]>(`${this.urlApi}clients?state=${state}`).pipe(
+      map(datas =>{
+        return datas.map(obj =>{
+          return new Client(obj);
+        })
+      })
+    );
   }
 }

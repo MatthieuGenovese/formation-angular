@@ -15,10 +15,7 @@ export class Client implements ClientI {
     }
   }
 
-  totalHT(): number {
-    return this.ca;
-  }
-  totalTTC(): number {
+  total(): number {
     return this.ca * (1 + this.tva/100);
   }
 }

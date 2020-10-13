@@ -8,7 +8,5 @@ export interface ClientI {
   id: number;
   state : StateClient;
 
-  totalHT() : number;
-
-  totalTTC(): number;
+  total() : number;
 }
