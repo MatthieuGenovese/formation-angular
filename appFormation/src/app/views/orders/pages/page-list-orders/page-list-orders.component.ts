@@ -17,7 +17,7 @@ export class PageListOrdersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.collectionHeaders = [ 'Type', 'Client', 'Nombre de jours', 'tjmHT', 'Total HT', 'Total TTC', 'Etat'];
+    this.collectionHeaders = [ 'Type', 'Client', 'Nombre de jours', 'tjmHT', 'Total HT', 'Total TTC', 'Etat', 'Date'];
     this.os.collection.subscribe(orders => {
       this.collectionOrder = orders;
       console.log(this.collectionOrder);

@@ -9,6 +9,7 @@ export interface OrderI {
   typePresta: string;
   client: string;
   comment: string;
+  date: Date;
 
   totalHT(): number;
 
