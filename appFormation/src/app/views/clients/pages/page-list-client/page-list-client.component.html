@@ -1,1 +1,5 @@
-<p>{{ title }}</p>
+<app-table-light *ngIf="collectionClient"
+  [collectionC]="collectionClient"
+  [headers]="collectionHeaders">
+</app-table-light>
+

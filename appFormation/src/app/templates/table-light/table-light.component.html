@@ -1,0 +1,31 @@
+<!-- <p>{{ headers | json }}</p>
+<p>{{ collection | json }}</p> -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let h of headers">{{ h }}</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="collection">
+    <tr *ngFor="let c of collection">
+      <td>{{ c.typePresta }}</td>
+      <td>{{ c.client }}</td>
+      <td>{{ c.nbJours }}</td>
+      <td>{{ c.tjmHT }}</td>
+      <td>{{ c.totalHT() }}</td>
+      <td>{{ c.totalTTC() }}</td>
+      <td>{{ c.state }}</td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="collectionC">
+    <tr *ngFor="let c of collectionC">
+      <td>{{ c.state }}</td>
+      <td>{{ c.tva }}</td>
+      <td>{{ c.name }}</td>
+      <td>{{ c.ca }}</td>
+      <td>{{ c.comment }}</td>
+      <td>{{ c.total() }}</td>
+    </tr>
+  </tbody>
+</table>

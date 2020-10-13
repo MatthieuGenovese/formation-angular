@@ -13,6 +13,7 @@ export class PageListClientComponent implements OnInit {
   public title: string;
 
   public collectionClient: Client[];
+  public collectionHeaders: string[];
 
   public collectionTest: Client[];
   constructor(
@@ -21,6 +22,7 @@ export class PageListClientComponent implements OnInit {
 
   ngOnInit(): void {
     this.title = "Clients here !"
+    this.collectionHeaders = ['State', 'TVA', 'Name', 'CA', 'Comment', 'Total']
     this.cs.collection.subscribe(clients => {
       this.collectionClient = clients;
       console.log(this.collectionClient);
