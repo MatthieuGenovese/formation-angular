@@ -5,6 +5,9 @@ import { OrdersRoutingModule } from './orders-routing.module';
 import { PageListOrdersComponent } from './pages/page-list-orders/page-list-orders.component';
 import { TableLightComponent } from 'src/app/templates/table-light/table-light.component';
 import { TemplatesModule } from 'src/app/templates/templates.module';
+import { TotalPipe } from 'src/app/shared/pipes/total.pipe';
+import { JourPipe } from 'src/app/shared/pipes/jour.pipe';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +15,8 @@ import { TemplatesModule } from 'src/app/templates/templates.module';
   imports: [
     CommonModule,
     OrdersRoutingModule,
-    TemplatesModule
+    TemplatesModule,
+    SharedModule
   ]
 })
 export class OrdersModule { }

@@ -8,11 +8,7 @@ import { Order } from 'src/app/shared/models/order.model';
   styleUrls: ['./table-light.component.scss']
 })
 export class TableLightComponent implements OnInit {
-
-  @Input() collection: Order[];
   @Input() headers: string[];
-  @Input() collectionC: Client[];
-
   constructor() { }
 
   ngOnInit(): void {
