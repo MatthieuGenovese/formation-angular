@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/core/services/user.service';
 import { Order } from 'src/app/shared/models/order.model';
+import { User } from 'src/app/shared/models/user.model';
 import { OrdersService } from '../../services/orders.service';
 
 @Component({
@@ -13,7 +15,8 @@ export class PageListOrdersComponent implements OnInit {
   public collectionHeaders: string[];
 
   constructor(
-    private os: OrdersService
+    private os: OrdersService,
+    private us: UserService
   ) { }
 
   ngOnInit(): void {
@@ -22,6 +25,7 @@ export class PageListOrdersComponent implements OnInit {
       this.collectionOrder = orders;
       console.log(this.collectionOrder);
     })
+
   }
 
 }
