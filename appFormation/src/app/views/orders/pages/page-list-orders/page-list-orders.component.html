@@ -4,14 +4,14 @@
 <tr *ngFor="let c of collectionOrder">
   <td>{{ c.typePresta }}</td>
   <td>{{ c.client }}</td>
-  <td>{{ c.nbJours | jour }}</td>
+  <td [appColorDay] = "c.nbJours">{{ c.nbJours | jour }}</td>
   <td>{{ c.tjmHT }}</td>
   <td>{{ c | total | currency : 'USD' }}</td>
   <td>{{ c | total: 'TTC' | currency : 'EUR' }}</td>
   <td>{{ c.totalHT() | currency : 'EUR' }}</td> -->
   <td>{{ c.totalTTC() | currency : 'USD' }}</td>
   <td>{{ c.state }}</td>
-  <td>{{ c.date | date : 'dd-MM-yyyy'}}</td>
+  <td [appColorState] = "c.state">{{ c.date | date : 'dd-MM-yyyy'}}</td>
 </tr>
 
 </app-table-light>
