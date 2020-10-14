@@ -4,9 +4,19 @@
 <tr *ngFor="let c of collectionUser">
   <td>{{ c.id }}</td>
   <td>{{ c.username }}</td>
-  <td>{{ c.role }}</td>
+  <td>
+    <select>
+      <option *ngFor="let r of roles" [value]="r" [selected] = "r === c.role">
+        {{ r }}
+      </option>
+    </select>
+  </td>
 </tr>
 </app-table-stripped>
+
+<app-btn [label]= "btnAdduser.label" [route]= "btnAdduser.route"></app-btn>
+
+
 
 <!-- <app-btn [label]= "btnRoute.label" [route]= "btnRoute.route"></app-btn>
 <app-btn [label]= "btnHref.label" [href]= "btnHref.href"></app-btn>
