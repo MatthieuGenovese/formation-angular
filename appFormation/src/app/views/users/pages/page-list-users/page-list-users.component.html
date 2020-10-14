@@ -1,0 +1,13 @@
+<app-table-stripped *ngIf="collectionUser"
+  [headers]="collectionHeaders">
+
+<tr *ngFor="let c of collectionUser">
+  <td>{{ c.id }}</td>
+  <td>{{ c.username }}</td>
+  <td>{{ c.role }}</td>
+</tr>
+</app-table-stripped>
+
+<!-- <app-btn [label]= "btnRoute.label" [route]= "btnRoute.route"></app-btn>
+<app-btn [label]= "btnHref.label" [href]= "btnHref.href"></app-btn>
+<app-btn [label]= "btnAction.label" [action]= "btnAction.action" (clicked)="openPopup()"></app-btn> -->

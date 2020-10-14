@@ -1,0 +1,19 @@
+@import 'themes';
+
+.state-cancel {
+  background: $color-error;
+}
+.state-option {
+  background: $color3;
+}
+.state-confirmed {
+  background: $color-success;
+}
+
+.day{
+  color: $color-error
+}
+
+.days{
+  color: $color-success
+}

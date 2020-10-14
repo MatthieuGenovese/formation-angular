@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   //{ path: 'clients', component: PageListClientsComponent },
   { path: 'clients', loadChildren: () => import('./views/clients/clients.module').then(m => m.ClientsModule)},
+  { path: 'users', loadChildren: () => import('./views/users/users.module').then(m => m.UsersModule)},
   { path: '**', component: PageNotFoundComponent }
 ];
 
