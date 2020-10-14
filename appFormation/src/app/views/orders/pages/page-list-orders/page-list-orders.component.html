@@ -8,10 +8,15 @@
   <td>{{ c.tjmHT }}</td>
   <td>{{ c | total | currency : 'USD' }}</td>
   <td>{{ c | total: 'TTC' | currency : 'EUR' }}</td>
-  <td>{{ c.totalHT() | currency : 'EUR' }}</td> -->
+  <td>{{ c.totalHT() | currency : 'EUR' }}</td>
   <td>{{ c.totalTTC() | currency : 'USD' }}</td>
-  <td>{{ c.state }}</td>
-  <td [appColorState] = "c.state">{{ c.date | date : 'dd-MM-yyyy'}}</td>
+  <td [appColorState] = "c.state">
+    <select (change) = "changeState(c, $event)">
+      <option *ngFor="let s of states" [value]="s" [selected] = "s === c.state">
+        {{ s }}
+      </option>
+    </select>
+  </td>
 </tr>
 
 </app-table-light>

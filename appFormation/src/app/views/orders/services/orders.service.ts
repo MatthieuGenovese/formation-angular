@@ -49,7 +49,21 @@ export class OrdersService {
         })
       })
     );
+  }
 
+  //Update
+
+  public update(order: Order): Observable<Order>{
+    return this.http.put<Order>(`${this.urlApi}orders/${order.id}`, order);
+
+  }
+
+  //Change State
+
+  public updateState(order: Order, state: StateOrder ): Observable<Order>{
+    const obj = new Order({...order});
+    obj.state = state;
+    return this.update(obj);
   }
 
 }

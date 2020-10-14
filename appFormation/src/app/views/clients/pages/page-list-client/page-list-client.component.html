@@ -2,7 +2,13 @@
   [headers]="collectionHeaders">
 
   <tr *ngFor="let c of collectionClient">
-    <td>{{ c.state }}</td>
+    <td>
+      <select (change) = "changeState(c, $event)">
+        <option *ngFor="let s of states" [value]="s" [selected] = "s === c.state">
+          {{ s }}
+        </option>
+      </select>
+    </td>
     <td>{{ c.tva }}</td>
     <td>{{ c.name }}</td>
     <td>{{ c.ca }}</td>

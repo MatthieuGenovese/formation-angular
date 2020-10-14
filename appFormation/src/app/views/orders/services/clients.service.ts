@@ -43,4 +43,19 @@ export class ClientsService {
       })
     );
   }
+
+  //Update
+
+  public update(client: Client): Observable<Client>{
+    return this.http.put<Client>(`${this.urlApi}clients/${client.id}`, client);
+
+  }
+
+  //Change State
+
+  public updateState(client: Client, state: StateClient ): Observable<Client>{
+    const obj = new Client({...client});
+    obj.state = state;
+    return this.update(obj);
+  }
 }

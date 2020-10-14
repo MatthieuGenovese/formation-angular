@@ -14,8 +14,8 @@ export class PageListClientComponent implements OnInit {
 
   public collectionClient: Client[];
   public collectionHeaders: string[];
+  public states = Object.values(StateClient);
 
-  public collectionTest: Client[];
   constructor(
     private cs: ClientsService
   ) { }
@@ -27,10 +27,13 @@ export class PageListClientComponent implements OnInit {
       this.collectionClient = clients;
       console.log(this.collectionClient);
     })
-    this.cs.getByState(StateClient.ACTIVE).subscribe(clients => {
-      this.collectionTest = clients;
-      console.log(this.collectionTest);
+  }
 
+  public changeState(client : Client, event){
+    this.cs.updateState(client, event.target.value).subscribe(data =>{
+      console.log("Before : ", client.state);
+      client.state = data.state;
+      console.log("After : ", client.state);
     });
   }
 
