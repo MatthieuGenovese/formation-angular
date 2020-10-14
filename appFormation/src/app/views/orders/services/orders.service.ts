@@ -66,4 +66,15 @@ export class OrdersService {
     return this.update(obj);
   }
 
+  //get by state with filter
+
+  public getFilterByState(state: StateOrder): Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.urlApi}orders`).pipe(
+      map(data => data
+        .filter(data => data.state === state)
+          .map(filterData => new Order(filterData))
+        )
+    )
+  }
+
 }

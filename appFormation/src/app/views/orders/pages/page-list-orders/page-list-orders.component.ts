@@ -28,6 +28,11 @@ export class PageListOrdersComponent implements OnInit {
       console.log(this.collectionOrder);
     })
 
+    // this.os.getFilterByState(StateOrder.CONFIRMED).subscribe(orders =>{
+    //   this.collectionOrder = orders;
+    //   console.log(this.collectionOrder);
+    // })
+
   }
 
   public changeState(order : Order, event){
