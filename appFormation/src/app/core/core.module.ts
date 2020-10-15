@@ -5,6 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { UserService } from './services/user.service';
+import { TextsModule } from '../texts/texts.module';
 
 
 
@@ -12,7 +13,8 @@ import { UserService } from './services/user.service';
   declarations: [HeaderComponent, NavbarComponent, FooterComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    TextsModule
   ],
   exports: [
     NavbarComponent,

@@ -31,3 +31,12 @@ h3 {
 p, span, i, li {
   font-size: $regular-fz;
 }
+
+.titre-client {
+  h1 {
+    font-weight: bold;
+  }
+  h2{
+    font-style: italic;
+  }
+}

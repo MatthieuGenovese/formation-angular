@@ -6,6 +6,7 @@ import { PageListClientComponent } from './pages/page-list-client/page-list-clie
 import { TemplatesModule } from 'src/app/templates/templates.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { IconsModule } from 'src/app/icons/icons.module';
+import { TextsModule } from 'src/app/texts/texts.module';
 
 
 @NgModule({
