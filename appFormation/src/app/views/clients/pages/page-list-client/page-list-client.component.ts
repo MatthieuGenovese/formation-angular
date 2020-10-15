@@ -20,12 +20,16 @@ export class PageListClientComponent implements OnInit {
   public btnRoute: BtnI;
   public btnFilter: BtnI;
   public clicked: boolean;
+  public a: string;
+  public b: string;
 
   constructor(
     private cs: ClientsService
   ) { }
 
   ngOnInit(): void {
+    this.a = "Clients";
+    this.b = "List of Clients";
     this.clicked = false;
     this.implementButtons();
     this.title = "Clients here !"

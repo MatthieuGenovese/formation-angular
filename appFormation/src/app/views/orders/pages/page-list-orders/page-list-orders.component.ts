@@ -19,6 +19,8 @@ export class PageListOrdersComponent implements OnInit {
   public states = Object.values(StateOrder);
   public btnRoute: BtnI;
   public btnHref: BtnI;
+  public title: string;
+  public subtitle: string;
   public btnAction: BtnI;
 
 
@@ -29,6 +31,8 @@ export class PageListOrdersComponent implements OnInit {
 
   ngOnInit(): void {
     this.implementButtons();
+    this.title="Orders";
+    this.subtitle="List of Orders"
     this.collectionHeaders = [ 'Type', 'Client', 'Nombre de jours', 'tjmHT', 'Total HT', 'Total TTC', 'Etat', 'Date'];
     this.collectionOrderObservable = this.os.collection;
     // this.os.collection.subscribe(orders => {
