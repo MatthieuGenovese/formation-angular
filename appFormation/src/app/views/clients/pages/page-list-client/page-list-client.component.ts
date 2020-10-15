@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { StateClient } from 'src/app/shared/enums/state-client.enum';
 import { BtnI } from 'src/app/shared/interfaces/btn-i';
 import { Client } from 'src/app/shared/models/client.model';
@@ -12,24 +13,24 @@ import { ClientsService } from 'src/app/views/orders/services/clients.service';
 export class PageListClientComponent implements OnInit {
 
   public title: string;
-
-  public collectionClient: Client[];
+  public collectionClientObservable: Observable<Client[]>;
+  //public collectionClient: Client[];
   public collectionHeaders: string[];
   public states = Object.values(StateClient);
   public btnRoute: BtnI;
+  public btnFilter: BtnI;
+  public clicked: boolean;
 
   constructor(
     private cs: ClientsService
   ) { }
 
   ngOnInit(): void {
+    this.clicked = false;
     this.implementButtons();
     this.title = "Clients here !"
     this.collectionHeaders = ['State', 'TVA', 'Name', 'CA', 'Comment', 'Total']
-    this.cs.collection.subscribe(clients => {
-      this.collectionClient = clients;
-      console.log(this.collectionClient);
-    })
+    this.collectionClientObservable = this.cs.collection;
   }
 
   public changeState(client : Client, event){
@@ -42,6 +43,15 @@ export class PageListClientComponent implements OnInit {
 
   public implementButtons(): void{
     this.btnRoute = {label : 'Add a client', route : 'add' };
+    this.btnFilter = { label : 'Filter by CA', action : true }
   }
 
+  public filterByCA(ca: number): void{
+    this.clicked = !this.clicked;
+    if(this.clicked){
+      this.collectionClientObservable = this.cs.getFilterByCa(ca);
+      return
+      };
+    this.collectionClientObservable= this.cs.collection;
+    }
 }

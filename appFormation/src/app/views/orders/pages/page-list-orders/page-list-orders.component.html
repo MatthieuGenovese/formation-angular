@@ -1,7 +1,7 @@
-<app-table-light *ngIf="collectionOrder"
+<app-table-light *ngIf="collectionOrderObservable | async as collection"
   [headers]="collectionHeaders">
 
-<tr *ngFor="let c of collectionOrder">
+<tr *ngFor="let c of collection">
   <td>{{ c.typePresta }}</td>
   <td>{{ c.client }}</td>
   <td [appColorDay] = "c.nbJours">{{ c.nbJours | jour }}</td>

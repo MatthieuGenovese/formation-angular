@@ -1,7 +1,7 @@
 <header class="fixed-top">
   <app-icon-nav (click)="switch()"></app-icon-nav>
   <ng-content select="app-header"></ng-content>
-  <app-icon-poweroff></app-icon-poweroff>
+  <app-icon-poweroff (click)="connect()"></app-icon-poweroff>
 </header>
 
 <main [ngClass]="{'close-aside': !open}">

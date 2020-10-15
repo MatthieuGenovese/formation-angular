@@ -5,6 +5,7 @@ import { ClientsRoutingModule } from './clients-routing.module';
 import { PageListClientComponent } from './pages/page-list-client/page-list-client.component';
 import { TemplatesModule } from 'src/app/templates/templates.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { IconsModule } from 'src/app/icons/icons.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     ClientsRoutingModule,
     TemplatesModule,
-    SharedModule
+    SharedModule,
+    IconsModule
   ]
 })
 export class ClientsModule { }

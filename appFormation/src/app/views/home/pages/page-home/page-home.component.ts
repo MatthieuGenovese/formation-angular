@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHomeComponent implements OnInit {
 
+  public userConnected: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.userConnected = localStorage.username;
   }
 
 }

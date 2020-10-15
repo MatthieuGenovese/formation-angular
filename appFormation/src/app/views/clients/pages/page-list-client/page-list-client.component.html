@@ -1,7 +1,7 @@
-<app-table-dark *ngIf="collectionClient"
+<app-table-dark *ngIf="collectionClientObservable | async as collection"
   [headers]="collectionHeaders">
 
-  <tr *ngFor="let c of collectionClient">
+  <tr *ngFor="let c of collection">
     <td>
       <select (change) = "changeState(c, $event)">
         <option *ngFor="let s of states" [value]="s" [selected] = "s === c.state">
@@ -19,4 +19,6 @@
 
 
 <app-btn [label]= "btnRoute.label" [route]= "btnRoute.route"></app-btn>
-
+<app-btn [label]= "btnFilter.label" [action]= "btnFilter.action" (clicked)="filterByCA(100000)">
+  <app-icon-filter></app-icon-filter>
+</app-btn>
