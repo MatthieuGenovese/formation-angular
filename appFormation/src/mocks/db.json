@@ -43,6 +43,79 @@
       "comment": "Comment pour Atos",
       "id": 4,
       "date": "2019-01-04"
+    },
+    {
+      "type": "Formation",
+      "client": "TestAjout",
+      "nbJours": 1,
+      "tjmht": 500,
+      "tva": 20,
+      "comment": "bonjour les ptits lapins",
+      "date": "2020-10-15",
+      "state": "OPTION",
+      "id": 5
+    },
+    {
+      "type": "Formation",
+      "client": "TestAjout",
+      "nbJours": 1,
+      "tjmht": 500,
+      "tva": 20,
+      "comment": "bonjour les ptits lapins",
+      "date": "2020-10-15",
+      "state": "OPTION",
+      "id": 6
+    },
+    {
+      "type": "Formation",
+      "client": "TestAjout",
+      "nbJours": 1,
+      "tjmht": 500,
+      "tva": 20,
+      "comment": "fsfsss",
+      "date": "2020-10-07",
+      "state": "OPTION",
+      "id": 7
+    },
+    {
+      "type": "Formation",
+      "client": "TestAjout",
+      "nbJours": 1,
+      "tjmht": 500,
+      "tva": 20,
+      "comment": "sdfsfs",
+      "date": null,
+      "state": "OPTION",
+      "id": 8
+    },
+    {
+      "typePresta": null,
+      "client": "TestAjout",
+      "nbJours": 1,
+      "tjmht": 500,
+      "tva": 20,
+      "comment": "fdsfffff",
+      "date": "2020-10-07",
+      "state": "OPTION",
+      "id": 9
+    },
+    {
+      "typePresta": "dqsdqdq",
+      "client": "qsdqdq",
+      "nbJours": 1,
+      "tjmht": 500,
+      "tva": 20,
+      "comment": null,
+      "date": null,
+      "state": "OPTION",
+      "id": 10
+    },
+    {
+      "tjmHT": 500,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "id": 11
     }
   ],
   "clients": [
@@ -77,6 +150,24 @@
       "ca": 75000,
       "comment": "New!",
       "id": 4
+    },
+    {
+      "tva": 20,
+      "state": "Active",
+      "id": 5
+    },
+    {
+      "tva": 20,
+      "state": "Active",
+      "id": 6
+    },
+    {
+      "name": "jean louis",
+      "ca": 155555,
+      "tva": 20,
+      "comment": "jojo",
+      "state": "Active",
+      "id": 7
     }
   ],
   "users": [

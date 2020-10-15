@@ -6,17 +6,20 @@ import { PageListClientComponent } from './pages/page-list-client/page-list-clie
 import { TemplatesModule } from 'src/app/templates/templates.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { IconsModule } from 'src/app/icons/icons.module';
-import { TextsModule } from 'src/app/texts/texts.module';
+import { FormAddClientComponent } from './components/form-add-client/form-add-client.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PageAddClientComponent } from './pages/page-add-client/page-add-client.component';
 
 
 @NgModule({
-  declarations: [PageListClientComponent],
+  declarations: [PageListClientComponent, FormAddClientComponent, PageAddClientComponent],
   imports: [
     CommonModule,
     ClientsRoutingModule,
     TemplatesModule,
     SharedModule,
-    IconsModule
+    IconsModule,
+    ReactiveFormsModule
   ]
 })
 export class ClientsModule { }

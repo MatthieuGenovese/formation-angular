@@ -77,4 +77,8 @@ export class OrdersService {
     )
   }
 
+  public addOrder(order: Order): Observable<Order>{
+    return this.http.post<Order>(`${this.urlApi}orders`, order);
+  }
+
 }

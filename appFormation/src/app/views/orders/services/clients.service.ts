@@ -67,4 +67,8 @@ export class ClientsService {
         )
     )
   }
+
+  public addClient(client: Client): Observable<Client>{
+    return this.http.post<Client>(`${this.urlApi}clients`, client);
+  }
 }
