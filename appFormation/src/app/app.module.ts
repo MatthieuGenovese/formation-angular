@@ -11,7 +11,6 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import  localeFr from '@angular/common/locales/fr';
-import { PageListUsersComponent } from './views/users/pages/page-list-users/page-list-users.component';
 
 registerLocaleData(localeFr, 'fr-FR');
 

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, Router } from '@angular/router';
 import { ControlService } from './core/services/control.service';
 import { PageHomeComponent } from './views/home/pages/page-home/page-home.component';
+import { PageLoginComponent } from './views/login/pages/page-login/page-login.component';
 import { PageNotFoundComponent } from './views/page-not-found/pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'clients',canActivate: [ControlService], loadChildren: () => import('./views/clients/clients.module').then(m => m.ClientsModule)},
   { path: 'users', canActivate: [ControlService], loadChildren: () => import('./views/users/users.module').then(m => m.UsersModule)},
+  { path: 'login', loadChildren: () => import('./views/login/login.module').then(m => m.LoginModule)},
   { path: '**', component: PageNotFoundComponent }
 ];
 
